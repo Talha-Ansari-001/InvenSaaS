@@ -1,7 +1,3 @@
--- Create Database
-CREATE DATABASE IF NOT EXISTS inventory_db;
-USE inventory_db;
-
 -- Roles Table
 CREATE TABLE IF NOT EXISTS roles (
     id INT AUTO_INCREMENT PRIMARY KEY,

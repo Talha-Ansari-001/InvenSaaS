@@ -38,17 +38,6 @@ const Login: React.FC = () => {
     }
   };
 
-  const handleDemoLogin = () => {
-    const demoUser = {
-      id: 1,
-      username: 'demo_admin',
-      email: 'admin@example.com',
-      role: 'Admin'
-    };
-    login('demo-token', demoUser);
-    navigate('/');
-  };
-
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
       <div className="w-full max-w-md space-y-8 rounded-xl bg-white p-8 shadow-lg">
@@ -102,14 +91,6 @@ const Login: React.FC = () => {
               className="flex w-full justify-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50"
             >
               {isLoading ? 'Signing in...' : 'Sign in'}
-            </button>
-            
-            <button
-              type="button"
-              onClick={handleDemoLogin}
-              className="flex w-full justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-            >
-              Demo Login (No Backend)
             </button>
           </div>
         </form>
